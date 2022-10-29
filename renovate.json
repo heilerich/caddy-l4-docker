@@ -1,0 +1,22 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+      "config:base"
+    ],
+    "prHourlyLimit": 0,
+    "separateMinorPatch": true,
+    "packageRules": [],
+    "regexManagers": [
+      {
+        "fileMatch": [
+          "^Dockerfile$"
+        ],
+        "matchStrings": [
+          "(?<githuburl>github.com.+)@(?<currentValue>)(?<currentDigest>[a-f0-9]+)\\s"
+        ],
+        "depNameTemplate": "https://{{githuburl}}",
+        "versioningTemplate": "git",
+        "datasourceTemplate": "git-refs"
+      }
+    ]
+  }
