@@ -5,7 +5,12 @@
     ],
     "prHourlyLimit": 0,
     "separateMinorPatch": true,
-    "packageRules": [],
+    "packageRules": [
+      {
+        "matchManagers": ["github-actions"],
+        "enabled": false
+      }
+    ],
     "regexManagers": [
       {
         "fileMatch": [
